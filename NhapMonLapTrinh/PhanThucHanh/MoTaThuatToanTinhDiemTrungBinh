@@ -1,0 +1,10 @@
+MoTaThuatToanTinhDiemTrungBinh
+
+Begin
+  Input A= Điểm Toán
+        B= Điểm Lý
+        C= Điểm Hóa
+        D= Điểm trung bình
+  D=A+B+C/3
+  Display D
+End
