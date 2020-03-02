@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+        Number 1: <input type="text" id="nhap1">
+        <br>
+        Number 2: <input type="text" id="nhap2">
+        <button onclick="cong()">Cộng</button>
+        <button onclick="tru()">Trừ</button>
+        <button onclick="nhan()">Nhân</button>
+        <button onclick="chia()">Chia</button>
+        <br>
+        Kết Quả: <input type="text" id="kq">
+
+    <script>
+        let kq = document.getElementById("kq");
+        let Number1 = document.getElementById("nhap1");
+        let Number2 = document.getElementById("nhap2");
+        function cong()
+        {
+            kq.value = parseInt(Number1.value) + parseInt(Number2.value);
+
+        }
+        function tru()
+        {
+            kq.value = parseInt(Number1.value) - parseInt(Number2.value);
+        }
+        function nhan()
+        {
+
+            kq.value = parseInt(Number1.value) * parseInt(Number2.value);
+        }
+        function chia()
+        {
+            kq.value = parseInt(Number1.value) / parseInt(Number2.value);
+        }
+
+
+    </script>
+</body>
+</html>

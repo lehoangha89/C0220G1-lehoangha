@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Amouth: <input type="text" id="amouth">
+<label >From Currency</label><select id="fromcuren">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select>
+<label >To Currency</label><select id="tocuren">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select><br>
+<button onclick="convert()">Convert</button>
+Kết Quả: <input id="ketqua">
+<script>
+    let amount = document.getElementById("amouth");
+    let FromCurrency = document.getElementById("fromcuren").value;
+    let ToCurrency = document.getElementById("tocuren").value;
+   function convert(){
+       if(FromCurrency === "VND" && ToCurrency === "USD"){
+           ketqua = amount.value / 23000;
+       }else if(FromCurrency === "USD" && ToCurrency === "VND"){
+           ketqua = amount.value * 23000;
+       }else alert("Nhập số tiền")
+   }
+</script>
+</body>
+</html>

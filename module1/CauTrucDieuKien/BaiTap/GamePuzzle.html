@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img onclick="nhap1()" id="hinh1" src="khỉ.png" height="176" width="286"/>
+<img onclick="nhap2()" id="hinh2" src="gau.png" height="179" width="282"/>
+<img onclick="nhap3()" id="hinh3" src="meo.png" height="194" width="259"/>
+<script>
+    let khi=document.getElementById("hinh1");
+    let gau=document.getElementById("hinh2");
+    let meo=document.getElementById("hinh3");
+    console.log(khi.src);
+    console.log(gau.src);
+    console.log(meo.src);
+    function nhap1() {
+        if (( khi.src==gau.src)&&(khi.src==meo.src )) {
+            alert("hoanthanh")
+        }else if(khi.src=="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/gau.png"){
+            khi.src="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/meo.png"
+        }else if(khi.src=="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/meo.png"){
+            khi.src="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/kh%E1%BB%89.png";
+        }else if (khi.src=="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/kh%E1%BB%89.png"){
+        khi.src="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/gau.png";
+        }
+    }
+    function nhap2() {
+        if (( khi.src==gau.src)&&(khi.src==meo.src )) {
+            alert("hoanthanh")
+        }else if(gau.src=="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/meo.png"){
+            gau.src="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/kh%E1%BB%89.png"
+        }else if(gau.src=="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/kh%E1%BB%89.png"){
+            gau.src="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/gau.png"
+        }else if (gau.src=="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/gau.png"){
+            gau.src="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/meo.png";
+        }
+
+    }
+    function nhap3() {
+        if(( khi.src==gau.src)&&(khi.src==meo.src )) {
+            alert("hoanthanh")
+        }else if(meo.src=="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/kh%E1%BB%89.png") {
+            meo.src = "http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/gau.png"
+        }else if(meo.src=="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/gau.png"){
+            meo.src="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/meo.png"
+        }else if (meo.src=="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/meo.png"){
+            meo.src="http://localhost:63342/Codegym/module1/CauTrucDieuKien/BaiTap/kh%E1%BB%89.png"
+        }
+    }
+
+    </script>
+</body>
+</html>

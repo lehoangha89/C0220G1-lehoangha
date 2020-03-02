@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table width="200">
+        <th><input type="text" id="hienso"></th>
+        <tr></tr>
+    </table>
+    <table width="200">
+        <th><button value="1" onclick="hienso(this.value)" id="mot">1</button></th>
+        <th><button value="2" onclick="hienso(this.value)" id="hai">2</button></th>
+        <th> <button value="3" onclick="hienso(this.value)" id="ba">3</button></th>
+        <th><button value="+" onclick="hienso(this.value)" id="cong">+</button></th>
+        <tr></tr>
+        <th><button value="4" onclick="hienso(this.value)" id="bon">4</button></th>
+        <th><button value="5" onclick="hienso(this.value)" id="nam">5</button></th>
+        <th><button value="6" onclick="hienso(this.value)"id="sau">6</button></th>
+        <th><button value="-" onclick="hienso(this.value)" id="tru">-</button></th>
+        <tr></tr>
+        <th><button value="7" onclick="hienso(this.value)" id="bay">7</button></th>
+        <th><button value="8" onclick="hienso(this.value)" id="tam">8</button></th>
+        <th><button value="9" onclick="hienso(this.value)" id="chin">9</button></th>
+        <th><button value="*" onclick="hienso(this.value)" id="nhan">*</button></th>
+        <tr></tr>
+        <th><button value="" onclick="hienso(this.value)" id="c">C</button></th>
+        <th><button value="0" onclick="hienso(this.value)" id="khong">0</button></th>
+        <th><button value="=" onclick="ketqua()">=</button></th>
+        <th><button value="/" onclick="hienso(this.value)" id="chia">/</button><br>
+</table>
+<script>
+    let Hienso=document.getElementById("hienso");
+    function hienso(thuchien) {
+        Hienso.value+=thuchien
+    }
+    function ketqua() {
+        Hienso.value=eval(Hienso.value)
+    }
+</script>
+</body>
+</html>

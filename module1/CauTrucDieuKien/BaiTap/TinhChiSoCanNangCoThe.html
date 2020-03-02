@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    Chiều Cao: <input type="text" id="height">
+    Cân Nặng: <input type="text" id="weight">
+    <br>
+    <button onclick="tinhbmi()">BMI</button>
+    <label id="bmi"></label>
+<script>
+    let cao=document.getElementById("height");
+    let nang=document.getElementById("weight");
+    let bmi;
+    function tinhbmi() {
+        bmi= nang.value / (cao.value*cao.value);
+        document.getElementById("bmi").innerHTML = bmi;
+    if (bmi<18.5){
+        alert("Underweight");
+    }
+    else if(bmi>18.5&&bmi<25.0){
+        alert("Normal");
+    }
+    else if(bmi>25.0&&bmi<30.0){
+        alert("Overweight");
+    }
+    else if(30.0<=bmi){
+        alert("Obese");
+    }
+
+    }
+</script>
+</body>
+</html>

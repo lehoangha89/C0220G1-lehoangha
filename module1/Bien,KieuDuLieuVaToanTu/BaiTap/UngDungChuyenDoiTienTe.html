@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        Amount:<label for="Amount"></label><input type="text" id="Amount">
+        <label for="FromCurrency">FromCurrency</label>:<select id="FromCurrency">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+    </select>
+        <label for="ToCurrency">ToCurrency</label>:<select id="ToCurrency">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+    </select>
+        <button onclick="Convert()">Convert</button>
+<br>
+
+        Ket qua: <label id="kq"></label>
+    <script>
+        function Convert() {
+            let Amount = document.getElementById("Amount");
+            let FromCurrency = document.getElementById("FromCurrency").value;
+            let ToCurrency = document.getElementById("ToCurrency").value;
+
+            if (FromCurrency === "VND" && ToCurrency === "USD")
+            {
+                convert =((parseInt(Amount.value ))/ 23000 );
+                document.getElementById("kq").innerHTML=convert;
+
+            }
+            else if (FromCurrency === "USD" && ToCurrency === "VND")
+            {
+                    convert = ((parseInt(Amount.value))*23000);
+                document.getElementById("kq").innerHTML=convert;
+            }
+        else
+            {
+                alert("Chọn loại tiền cần quy đổi");
+            }
+
+
+        }
+    </script>
+</body>
+</html>

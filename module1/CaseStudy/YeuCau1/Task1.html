@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng Dụng Quản Lý Khu Nghỉ Dưỡng</title>
+</head>
+<body>
+    Name: <input type="text">
+    CMND: <input type="number">
+    Birthday: <input type="text">
+    Email: <input type="text">
+    <br>
+    Address: <input type="text">
+    <label for="Custome">Custome</label>:<select id="Custome">
+        <option value="Diamond">Diamond</option>
+        <option value="Platinum">Platinum</option>
+        <option valure="Gold">Gold</option>
+        <option valure="Silver">Silver</option>
+        <option value="Member">Member</option>
+    </select>
+    Discout: <input type="text" id="discout">
+    <br>
+    <label >Type of service</label>:<select id="service">
+        <option value="Villa">Villa</option>
+        <option value="House">House</option>
+        <option value="Room">Room</option>
+    </select>
+    Rentdays: <input type="text" id="rentdays">
+    <label >Room</label>: <select id="Room">
+        <option value="Vip">Vip</option>
+        <option value="Business>">Business</option>
+        <option value="Normal">Normal</option>
+    </select>
+<br>
+    <br>
+    <button onclick="tong()">Total</button>
+    <label id="total"></label>
+<br>
+    Bảng Giá:
+<br>
+    - Villa 500$/ 1 ngày
+    <br>
+    - House 300$/1 ngày
+    <br>
+    - Room: 100$/1 ngày
+<script>
+    let service=document.getElementById("service");
+    let rentdays=document.getElementById("rentdays");
+    let discout=document.getElementById("discout");
+    let cost;
+    function tong() {
+        if (service.value == "Villa") {
+             cost = 500;
+        } else if (service.value == "House") {
+            cost = 300;
+        } else cost = 100;
+        console.log(cost);
+        total = cost * rentdays.value * (1 - (discout.value / 100));
+        document.getElementById("total").innerHTML = total;
+    }
+
+</script>
+</body>
+</html>

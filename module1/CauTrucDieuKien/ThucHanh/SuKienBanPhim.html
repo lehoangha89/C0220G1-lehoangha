@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="thuchien()">
+<img id="nobita" style="position: absolute; top: 0; left: 0" src="nobita.jpg" height="304" width="166"/>
+<script>
+    function đilên() {
+        let hinh=document.getElementById("nobita");
+        hinh.style.top=(parseInt(hinh.style.top) -10 )+ 'px';
+    }
+    function xuong() {
+        let hinh=document.getElementById("nobita");
+        hinh.style.top=(parseInt(hinh.style.top) +10) +'px';
+    }
+    function trái() {
+        let hinh=document.getElementById("nobita");
+        hinh.style.left=(parseInt(hinh.style.left) -10 )+ 'px';
+    }
+    function phải() {
+        let hinh=document.getElementById("nobita");
+        hinh.style.left=(parseInt(hinh.style.left) +10 )+ 'px';
+    }
+    function dichuyen(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                trái();
+                break;
+            case 38:
+                đilên();
+                break;
+            case 39:
+                phải();
+                break;
+            case 40:
+                xuong();
+                break;
+        }
+    }
+    function thuchien() {
+        window.addEventListener("keydown", dichuyen);
+    }
+</script>
+
+</body>
+</html>
