@@ -7,13 +7,21 @@
 <body>
 Do you love me?<br>
 <button onclick="nhap()" id="co">Yes</button>
-<input type="button"  id="khong" style="position:absolute ; top: 27px ; left: 0px" value="No" onclick="dichuyen()" />
+<button id="khong" style="position:relative ; top: 27px ; left: 0px" value="No" onmouseover="dichuyen()">No</button>
 <script>
     let click=document.getElementById("khong");
-    function dichuyen() {
-        click.style.left=(parseInt(click.style.left)+100) + "px";
-        click.style.top= (parseInt(click.style.top)+100) + "px";
+    let yes=document.getElementById("co");
+    let cao= window.innerHeight;
+    let rong= window.innerWidth;
+    function nhap() {
+        alert("Thank you, Babe")
     }
+
+    function dichuyen() {
+        click.style.left= (Math.round(Math.random()*500)) + "px";
+        click.style.top= (Math.round(Math.random()*500)) + "px";
+    }
+
 </script>
 </body>
 </html>

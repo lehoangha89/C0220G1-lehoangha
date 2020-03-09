@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diem1=parseInt(prompt("Điểm Kiểm Tra"));
+    let diem2=parseInt(prompt("Điểm Giữa Kì"));
+    let diem3=parseInt(prompt("Điểm Cuối Kì"));
+    let diem4=((diem1*20)/100)+((diem2*30)/100)+((diem3*50)/100);
+    if(diem4 > 8) {
+        alert("Học Sinh Giỏi")
+    }else if ((diem4 < 8) && (diem4  >= 6.5)){
+        alert("Học Sinh Khá")
+    }else if ((diem4 < 6.5) && (diem4 >=5)){
+        alert("Học Sinh Trung Bình")
+    }else if ((diem4 < 5) && (diem4 >=3.5)){
+        alert("Học Sinh Yếu")
+    }else {alert("Học Sinh Kém")}
+</script>
+
+</body>
+</html>

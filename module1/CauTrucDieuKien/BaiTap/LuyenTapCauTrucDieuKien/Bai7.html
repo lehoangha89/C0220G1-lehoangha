@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x=25;
+    let y=parseInt(prompt("Nhập số phút gọi điện"));
+    if(y<50){
+        ketqua=25000+(y*600);
+        alert(ketqua);
+    }else if (y>50&& y<=200){
+        ketqua=25000+(50*600)+((y-50)*400);
+        alert(ketqua)
+    }else if(y>200){
+        ketqua=25000+(50*600)+(150*400)+((y-200)*200);
+        alert(ketqua)
+    }
+</script>
+</body>
+</html>

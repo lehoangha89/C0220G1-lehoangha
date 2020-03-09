@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="abc()">Click</button>
+<script>
+
+    function abc() {
+        let so1 =parseInt(prompt("Nhập A"));
+        let so2 =parseInt(prompt("Nhập B"));
+        let doan=parseInt(prompt("Số người dùng đoán"));
+        let so3= Math.floor((Math.random()*(so2-so1))+so1);
+        while (so3!=doan){
+            doan=parseInt(prompt("Nhập Số"));
+            if(so3<doan){
+                alert("lớn hơn số random");
+            }else if(so3>doan){
+                alert("nhỏ hơn số random");
+            }
+        }alert("chúc mừng")
+    }
+</script>
+</body>
+</html>

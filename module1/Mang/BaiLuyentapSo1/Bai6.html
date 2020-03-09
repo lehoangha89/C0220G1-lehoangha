@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr;
+    let flag=false;
+    arr=prompt("Nhap so");
+    let v=prompt("nhap so can tim trong mang");
+    arr=arr.split(",");
+    for (let i=0;i<arr.length;i++){
+        if(v==arr[i]){
+            flag=true;
+            break;
+        }if (flag=true){
+            document.write(v +" co trong mang");
+        }else{
+            document.write(v +" khong co trong mang")}
+    }
+</script>
+</body>
+</html>

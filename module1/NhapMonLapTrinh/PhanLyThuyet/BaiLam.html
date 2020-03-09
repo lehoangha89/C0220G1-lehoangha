@@ -15,7 +15,30 @@
 <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
 </body>
 <script>
-    document.getElementById(dg).innerHTML
+    // var array1 = new Array(1, 2, 3);
+    // console.log(array1); // [1, 2, 3]
+    // console.log(array1.length); // 3
+    //
+    // // Tạo array với 1 tham số  (là số )
+    // var array2 = new Array(3);
+    // console.log(array2); // Array(3) {length: 3}
+    // console.log(array2.length); // 3
+    //
+    // // Tạo array với 1 tham số  (không phải là số )
+    // var array3 = new Array("3");
+    // console.log(array3); // ["3"]
+    // console.log(array3.length); // 1
+    let iMax = 20;
+    let jMax = 10;
+    let f = new Array();
+
+    for (i = 0; i < iMax; i++) {
+        f[i] = new Array();
+        for (j = 0; j < jMax; j++) {
+            f[i][j] = 0;
+        }
+    }console.log(f)
+
 </script>
 </body>
 </html>

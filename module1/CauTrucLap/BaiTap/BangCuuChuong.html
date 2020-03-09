@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ovuong;
+    ovuong="<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+    for(let i=1;i<=9;i++){
+        ovuong = ovuong + "<tr>";
+        for(let j=2;j<=9;j++){
+            ovuong = ovuong + "<td>" +(j+ "x" + i+"=" + (i * j)) + "</td>";
+        }ovuong = ovuong + "</tr>";
+    }
+    ovuong = ovuong + "</table>";
+    document.write(ovuong);
+</script>
+</body>
+</html>

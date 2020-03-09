@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập số cạnh A"));
+    let b = parseInt(prompt("Nhập số cạnh B"));
+    let c = parseInt(prompt("Nhập số cạnh C"));
+    if (a + b + c > 0) {
+        if (a + b > c) {
+            if (b + c > a) {
+                if (a + c > a) {
+                    alert("a,b,c là cạnh của một tam giác");
+                }else {alert("a,b,c không phải là cạnh của một tam giác")}
+            }else {alert("a,b,c không phải là cạnh của một tam giác")}
+        }else {alert("a,b,c không phải là cạnh của một tam giác")}
+    }else {alert("a,b,c không phải là cạnh của một tam giác")}
+</script>
+</body>
+</html>

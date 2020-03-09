@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[];
+    let i=0;
+    let count=0;
+    while (i<5){
+        let nhap=parseInt(prompt("Tim so nguyen am"));
+        arr[i]=nhap;
+        i++;
+    }
+    for (let j=0;j<arr.length;j++){
+        if (arr[j]<0){
+            document.write("arr[ "+j+" ]= "+arr[j]+"<br>");
+            count++;
+        }
+    }document.write("Co "+ count+" so nguyen am")
+</script>
+</body>
+</html>

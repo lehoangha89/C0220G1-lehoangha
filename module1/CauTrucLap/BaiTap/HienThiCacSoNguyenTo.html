@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let count=0;
+let N=2;
+let a=true;
+while (count<20){
+    for (i=2;i<=Math.sqrt(N);i++){
+        if(N%i==0){
+            a=false;
+            break;
+        }
+        a=true;
+
+    }
+    if (a){
+        count++;
+        document.write(N + "<br>");
+    }
+    N++;
+}
+</script>
+</body>
+</html>

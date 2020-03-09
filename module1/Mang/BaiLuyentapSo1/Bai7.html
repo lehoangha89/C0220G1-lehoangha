@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let i=0;
+    while (i < 10) {
+        let nhap = prompt("Nhap so");
+        arr[i] = nhap;
+        i++;
+    }
+    let v = prompt("so can kiem tra");
+    while (arr.indexOf(v)>=0){
+    if (arr.indexOf(v) >= 0) {
+        for (let j = arr.indexOf(v) + 1; j < arr.length; j++) {
+            arr[j - 1] = arr[j];
+        }
+        arr.pop();
+    }
+    }
+    for (let x = 0; x < arr.length; x++) {
+        document.write("arr[" + x + "] = " + arr[x] + "<br>");
+    }
+</script>
+</body>
+</html>

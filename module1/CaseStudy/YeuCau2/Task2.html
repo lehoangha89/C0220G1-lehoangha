@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let totalPay;
+    let TypeService = prompt("Nhập Loại Phòng");
+    let cost;
+    if (TypeService === "Villa") {
+        cost = 500;
+    } else if (TypeService === "House") {
+        cost = 300;
+    } else if (TypeService === "Room") {
+        cost = 100;
+    }
+    let Address = prompt("Địa Chỉ");
+    let address;
+    if (Address === "Đà Nẵng") {
+        address = 20 / 100;
+    } else if (Address === "Huế") {
+        address = 10 / 100;
+    } else if (Address === "Quảng Nam") {
+        address = 5 / 100;
+    }
+    let renDays = parseInt(prompt("Ngày Lưu trú"));
+    let renday;
+    if (renDays > 7) {
+        renday = 30 / 100;
+    } else if (renDays >5) {
+        renday = 20 / 100;
+    } else if (renDays > 2) {
+        renday = 10 / 100;
+    }
+    let typeCustomer = prompt("Member");
+    let customer;
+    if (typeCustomer === "Diamond") {
+        customer = 15 / 100;
+    } else if (typeCustomer === "Platium") {
+        customer = 10 / 100;
+    } else if (typeCustomer === "Gold") {
+        customer = 5 / 100;
+    } else if (typeCustomer === "Silver") {
+        customer = 2 / 100;
+    } else if (typeCustomer === "member") {
+        customer = 0;
+    }
+    discount = address + renday + customer;
+    totalPay = cost * renDays - discount;
+    document.write("discount: " + discount);
+    document.write("<br>")
+    document.write("totalPay: " + totalPay + "USD");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let b=0;
+    let arr=[];
+    let total=0;
+    while (b<5){
+        let nhap=parseInt(prompt("nhap so nguyen"));
+        arr[b]=nhap;
+        b++;
+    }
+    let max=0;
+    let index;
+    for (let i=0;i<arr.length;i++){
+        if(arr[i]>max){
+            max=arr[i];
+            index=i;
+        }
+        total += arr[i];
+    }
+    total= total / arr.length;
+    document.write("vi tri so lon nhat: " + index);
+    document.write("Gia tri trung binh: "+total);
+
+</script>
+</body>
+</html>

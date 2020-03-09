@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=parseInt(prompt("NHập số A"));
+    let b=parseInt(prompt("Nhập số B"));
+    let c=parseInt(prompt("Nhập số C"));
+    ketqua()
+    function ketqua() {
+        delta=(b*b)-(4*a*c);
+    }
+    if(delta<0){
+        alert("phương trình vô nghiệm")
+    }else if(delta===0){
+        alert("phương trình có nghiệm kép X1=X2"+ (-b/(2*a)))
+    }else if(delta>0){
+        alert("phương trình có 2 nghiệm X1="+ ((-b+Math.sqrt(delta))/(2*a))+" + X2="+((-b-Math.sqrt(delta))/(2*a)));
+    }
+
+</script>
+</body>
+</html>
