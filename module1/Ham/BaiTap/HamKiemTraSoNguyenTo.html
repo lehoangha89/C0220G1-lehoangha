@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố 0 tới 10000</title>
+</head>
+<body>
+Nhập Số: <input id="num">
+<button onclick="kiemtra()">Check</button>
+<script>
+    function check(nhap) {
+        for (let i = 2; i <= Math.sqrt(nhap); i++) {
+            if (nhap % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function kiemtra() {
+        let nhap = parseInt(document.getElementById("num").value);
+        if (check(nhap)) {
+            alert(nhap + " Là số Nguyên tố")
+        } else {
+            alert(nhap + " Không phải là số Nguyên tố")
+        }
+        let number = 2;
+        while (number < 10000) {
+            if (check(number)) {
+                document.write(number + " ")
+            }
+            number++;
+        }
+    }
+</script>
+</body>
+</html>

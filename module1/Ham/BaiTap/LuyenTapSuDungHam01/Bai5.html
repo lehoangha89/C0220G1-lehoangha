@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập tên ngôi sao</title>
+</head>
+<body>
+<script>
+
+    let ketqua;
+    let flag = false;
+
+    function search() {
+        let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr2 = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa", "Major", "Leo"];
+
+        for (let i = 0; i < arr1.length; i++) {
+            if (ngoisao === arr1[i]) {
+                flag = true;
+                ketqua = arr2[i];
+            }
+        }if (flag) {
+            alert(ketqua)
+        } else alert("not found")
+    }
+    let ngoisao = prompt("Nhập tên");
+    let kq = search(ngoisao);
+</script>
+</body>
+</html>

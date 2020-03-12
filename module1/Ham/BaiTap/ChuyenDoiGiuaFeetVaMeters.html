@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Chuyển:<input id="chuyen">
+<label>Meters</label><select id="met">
+    <option value="Meters">Meters</option>
+    <option value="Feet">Feet</option>
+</select>
+<label>Feet</label><select id="feet">
+    <option value="Meters">Meters</option>
+    <option value="Feet">Feet</option>
+</select>
+<button onclick="convert()">Convert</button>
+Kết quả: <input id="kq">
+<script>
+    function convert() {
+        let nhap = document.getElementById("chuyen");
+        let meters = document.getElementById("met").value;
+        let fet = document.getElementById("feet").value;
+        let ketqua = document.getElementById("kq");
+        if (meters === "Meters" && fet === "Feet") {
+            ketqua.value = nhap.value * 0.305;
+        } else if (meters === "Feet" && fet === "Meters") {
+            ketqua.value = nhap.value * 3.279
+        }
+
+    }
+</script>
+</body>
+</html>

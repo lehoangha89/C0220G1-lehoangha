@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nguyên dương</title>
+</head>
+<body>
+<script>
+    function check(nhap) {
+        if(0>(nhap)){
+            return false;
+        }else if (0<=(nhap)){
+            return true
+        }
+    }
+
+    let nhap=prompt("Nhập Số Bất Kì");
+    let kq=check(nhap);
+    document.write(kq);
+</script>
+</body>
+</html>

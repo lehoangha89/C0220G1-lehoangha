@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số hay không</title>
+</head>
+<body>
+<script>
+    function check(nhap) {
+        if(isNaN(nhap)){
+            return false;
+        }else if (!isNaN(nhap)){
+            return true
+        }
+    }
+
+    let nhap=prompt("Nhập đê");
+    let kq=check(nhap);
+    document.write(kq);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ 2 số</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 2; i++) {
+        arr[i] = prompt("nhap :")
+    }
+    function doicho(arr1) {
+        let c;
+        let fist = 0;
+        let last = arr1.length - 1;
+        while (fist < last) {
+            c = arr1[last];
+            arr1[last] = arr1[fist];
+            arr1[fist] = c;
+            fist++;
+            last--;
+        }
+    }
+    doicho(arr);
+    document.write(arr);
+</script>
+</body>
+</html>

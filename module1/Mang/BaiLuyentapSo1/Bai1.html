@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Số lớn hơn hoặc bằng 10.</title>
 </head>
 <body>
 <script>
     let arr1=[];
     let a=0;
+    let count=0;
   while (a<10) {
       let nhap=prompt("nhập số");
       arr1[a]=nhap;
       a++;
   }
-    for (i = 0; i < arr1.length; i++) {
+    for (let i = 0; i < arr1.length; i++) {
         if (arr1[i] >= 10) {
             document.write(arr1[i] + "<br>");
+            count++;
         }
-    }
+    }document.write("Có "+count+" số lớn hơn hoặc bằng 10");
 </script>
 </body>
 </html>

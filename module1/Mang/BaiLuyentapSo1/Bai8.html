@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Sắp xếp mảng lớn đến bé</title>
 </head>
 <body>
 <script>
-    let arr=[];
-    let i=0;
-    while (i<10){
-        let nhap=prompt("Nhap so");
-        arr[i]=nhap;
+    let arr = [];
+    let i = 0;
+    while (i < 10) {
+        let nhap = prompt("Nhap so");
+        arr[i] = nhap;
         i++;
-    }arr.sort(function (a,b) {
-        return b-a
-    })
+    }
+    arr.sort((a, b)=>{
+        return b - a})
     document.write(arr)
 </script>
 </body>

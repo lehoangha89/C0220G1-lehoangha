@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Giai Thừa</title>
+</head>
+<body>
+<script>
+    function check(num) {
+        let result = num;
+        if (num === 0 || num === 1) {
+            return 1;
+        }
+        while(num > 1) {
+            num--;
+            result *= num;
+        }
+        return result;
+    }
+    let num=parseInt(prompt("Nhập số lần Giai thừa"));
+    let kq=check(num);
+    document.write(kq)
+</script>
+</body>
+</html>

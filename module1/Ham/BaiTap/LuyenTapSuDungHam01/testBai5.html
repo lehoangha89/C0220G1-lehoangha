@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Ngôi sao: <input id="ngoisao">
+Chòm sao: <input id="chomsao">
+<button onclick="search()">Tìm Kiếm</button>
+<script>
+    let chomsao = document.getElementById("chomsao");
+    let ngoisao = document.getElementById("ngoisao");
+    // let Star=prompt("Nhập tên");
+    let ketqua;
+    let flag=false;
+    function search() {
+        let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let arr2 = ["Ursa", "Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa", "Major", "Leo"];
+
+        for (let i = 0; i < arr1.length; i++) {
+            if (ngoisao.value === arr1[i]) {
+                flag=true;
+                ketqua = arr2[i];
+            }
+            if (flag){
+                chomsao.value = ketqua;
+            }else chomsao.value = "not found"
+
+        }
+    }
+</script>
+</body>
+</html>

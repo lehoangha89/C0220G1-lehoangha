@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        arr[i] = prompt(" Nhập ký tự: ")
+    }
+    let b = prompt("nhập ký tự cần tìm: ")
+    let result = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (b == arr[i]) {
+            // result += 1;
+            document.write("arr["+i+"]"+"="+b+"<br>");
+        }
+    }
+    // alert(result);
+</script>
+</body>
+</html>

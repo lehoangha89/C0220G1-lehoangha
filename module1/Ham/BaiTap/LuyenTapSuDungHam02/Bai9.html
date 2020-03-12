@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra kí tự trong Mảng</title>
+</head>
+<body>
+<script>
+    let arr;
+    arr=prompt("Nhập kí tự");
+    let v=prompt("Nhập kí tự cần tìm trong mảng");
+    arr=arr.split(",");
+    document.write(findSame());
+    function findSame() {
+        let count=0;
+        for (let i=0;i<arr.length;i++){
+            if (v==arr[i]){
+                count++;
+            }
+        }
+        if (count>0){
+            return count;
+        }else {
+            return -1;
+        }
+    }
+</script>
+</body>
+</html>
