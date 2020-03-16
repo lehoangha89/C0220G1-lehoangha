@@ -6,6 +6,9 @@
 </head>
 <body>
 <canvas id="myCanvas" width="500px" height="250px" style="border: 1px solid #d3d3d3;"></canvas>
+<button onclick="changeRectangle()">Change</button>
+<button onclick="result()">Calculate</button>
+Result:<input type="text" id="ketqua">
 <script>
 let rectangle=function (width,height) {
     this.width=width;
@@ -17,12 +20,30 @@ let rectangle=function (width,height) {
         return 2*(this.width+this.height);
 
     }
-    function createRectangle(){
+    this.createRectangle=function (){
         let ctx = document.getElementById("myCanvas").getContext("2d");
         ctx.beginPath();
         ctx.fillRect(50, 50, this.width, this.height);
+        ctx.stroke();
     }
 }
+let dai=parseInt(prompt("Nhập chiều dài hình chữ nhật"));
+let rong=parseInt(prompt("Nhập chiều rộng hình chữ nhật"));
+let Rectangle= new rectangle(dai,rong);
+Rectangle.createRectangle();
+function changeRectangle() {
+    Rectangle.width=parseInt(prompt("Nhập chiều dài hình chữ nhật"));
+    Rectangle.height=parseInt(prompt("Nhập chiều rộng hình chữ nhật"));
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    ctx.clearRect(0,0,500,250);
+    Rectangle.createRectangle();
+}
+function result(){
+    let kq=document.getElementById("ketqua");
+    kq.value=("Dien tich: "+Rectangle.Area()+" Chu vi:"+Rectangle.perimeter())
+}
+
+
 </script>
 </body>
 </html>
