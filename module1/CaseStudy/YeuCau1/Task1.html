@@ -46,7 +46,7 @@
 <script>
     let service=document.getElementById("service");
     let rentdays=document.getElementById("rentdays");
-    let discout=document.getElementById("discout");
+    let discount=document.getElementById("discout");
     let cost;
     function tong() {
         if (service.value == "Villa") {
@@ -55,7 +55,7 @@
             cost = 300;
         } else cost = 100;
         console.log(cost);
-        total = cost * rentdays.value * (1 - (discout.value / 100));
+        total = cost * rentdays.value * (1 - (discount.value / 100));
         document.getElementById("total").innerHTML = total;
     }
 

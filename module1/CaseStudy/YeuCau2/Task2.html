@@ -6,6 +6,18 @@
 </head>
 <body>
 <script>
+    let name=prompt("Input Name: ");
+    let cmnd=prompt("Input cmnd: ");
+    let bỉrthday=prompt("Input bỉrthday: ");
+    let email=prompt("Input Email: ");
+    let address=prompt("Input Address: ");
+    let typeService=prompt("Input Type Service: ");
+    let typeRoom=prompt("Input type room: ");
+    let typeCustomer=prompt("Input type customer: ");
+    let discount=prompt("Input Discount: ");
+    let quantityIncluded=prompt("Input Quantity Included: ");
+    let rentdays=prompt("Input RentDays: ");
+    totalPay=300*parseFloat(rentdays)*(1-parseFloat(discount)/100);
     let totalPay;
     let TypeService = prompt("Nhập Loại Phòng");
     let cost;
@@ -19,33 +31,33 @@
     let Address = prompt("Địa Chỉ");
     let address;
     if (Address === "Đà Nẵng") {
-        address = 20 / 100;
+        address += 20;
     } else if (Address === "Huế") {
-        address = 10 / 100;
+        address += 10;
     } else if (Address === "Quảng Nam") {
-        address = 5 / 100;
+        address += 5;
     }
     let renDays = parseInt(prompt("Ngày Lưu trú"));
     let renday;
     if (renDays > 7) {
-        renday = 30 / 100;
+        renday += 30;
     } else if (renDays >5) {
-        renday = 20 / 100;
+        renday += 20;
     } else if (renDays > 2) {
-        renday = 10 / 100;
+        renday += 10;
     }
     let typeCustomer = prompt("Member");
     let customer;
     if (typeCustomer === "Diamond") {
-        customer = 15 / 100;
+        customer += 15;
     } else if (typeCustomer === "Platium") {
-        customer = 10 / 100;
+        customer += 10;
     } else if (typeCustomer === "Gold") {
-        customer = 5 / 100;
+        customer += 5;
     } else if (typeCustomer === "Silver") {
-        customer = 2 / 100;
+        customer += 2;
     } else if (typeCustomer === "member") {
-        customer = 0;
+        customer += 0;
     }
     discount = address + renday + customer;
     totalPay = cost * renDays - discount;

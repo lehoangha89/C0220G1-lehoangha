@@ -25,11 +25,15 @@
                 break;
             }
             case 2:{
+                let check=false;
                 let nameCustomer=prompt("Enter customer you want delete: ");
                 for (let i=0;i<arrNameCustomer.length;i++){
                     if(arrNameCustomer[i]===nameCustomer){
                         arrNameCustomer.splice(i,1);
+                        check=true;
                     }
+                }if(!check){
+                    alert("Ten chua ban muon xoa khong co trong mang");
                 }
                 let result = "";
                 arrNameCustomer.sort();

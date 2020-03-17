@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrListCustomer = [];
+
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1. Add new Customers" + "\n2.Display Infomation Customer" + "\n3.Edit Infomation Customer" + "\n4.Delete Customer" + "\n5. Exit Customer"));
+        switch (choose) {
+            case 1: {
+                addNewCustomer();
+                break;
+            }
+            case 2: {
+                displayCustomer();
+                break;
+            }
+            case 3: {
+                break;
+            }
+            case 4: {
+                break;
+            }
+            case 5: {
+                break;
+            }
+            default: {
+                alert("Failed");
+            }
+        }
+    }
+
+    function displayCustomer() {
+        let temp = "";
+        for (let i = 0; i < arrListCustomer.length; i++) {
+            temp += i + ". Name: " + arrListCustomer[i][0] + "\n";
+        }
+        let chooseDisplay = parseInt(prompt(temp));
+        alert("Tên:" + arrListCustomer[chooseDisplay][0] + "\n" +
+            "CMND:" + arrListCustomer[chooseDisplay][1] + "\n" +
+            "Ngày sinh:" + arrListCustomer[chooseDisplay][2] + "\n" +
+            "Email:" + arrListCustomer[chooseDisplay][3] + "\n" +
+            "Địa chỉ:" + arrListCustomer[chooseDisplay][4] + "\n" +
+            "Loại dịch vụ:" + arrListCustomer[chooseDisplay][5] + "\n" +
+            "Loại phòng:" + arrListCustomer[chooseDisplay][6] + "\n" +
+            "Loại khách hàng:" + arrListCustomer[chooseDisplay][7] + "\n" +
+            "Giảm giá:" + arrListCustomer[chooseDisplay][8] + "\n" +
+            "Số người đi kèm:" + arrListCustomer[chooseDisplay][9] + "\n" +
+            "Ngày lưu trú:" + arrListCustomer[chooseDisplay][10] + "\n");
+        displayMainMenu();
+    }
+    function addNewCustomer() {
+        let cusInfo = [];
+        let name = prompt("Input Name: ");
+        let cmnd = prompt("Input cmnd: ");
+        let birthday = prompt("Input birthday: ");
+        let email = prompt("Input Email: ");
+        let address = prompt("Input Address: ");
+        let typeService = prompt("Input Type Service: ");
+        let typeRoom = prompt("Input type room: ");
+        let typeCustomer = prompt("Input type customer: ");
+        let discount = prompt("Input Discount: ");
+        let quantityIncluded = prompt("Input Quantity Included: ");
+        let rentdays = prompt("Input RentDays: ");
+
+        cusInfo.push(name);
+        cusInfo.push(cmnd);
+        cusInfo.push(birthday);
+        cusInfo.push(email);
+        cusInfo.push(address);
+        cusInfo.push(typeService);
+        cusInfo.push(typeRoom);
+        cusInfo.push(typeCustomer);
+        cusInfo.push(discount);
+        cusInfo.push(quantityIncluded);
+        cusInfo.push(rentdays);
+        arrListCustomer.push(cusInfo);
+        alert("Bạn đã thêm thành công");
+        displayMainMenu()
+    }
+
+    displayMainMenu();
+</script>
+</body>
+</html>

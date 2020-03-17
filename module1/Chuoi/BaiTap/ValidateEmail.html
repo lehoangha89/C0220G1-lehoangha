@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check() {
+        let a=prompt("nhap email")
+    let Pattern=/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+    if(a.match(Pattern)){
+        alert("hop le");
+    }else {
+        alert("khong hop le");
+    }
+    }
+    check()
+</script>
+</body>
+</html>

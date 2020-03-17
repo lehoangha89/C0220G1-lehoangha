@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        let nhap=prompt("Input account");
+        let pattern=/^[_a-z0-9]{6,}$/;
+        if(nhap.match(pattern)){
+            alert("Account hop le");
+        }else {
+            alert("Account khong hop le");
+        }
+</script>
+</body>
+</html>
