@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Làm việc với Date</title>
+</head>
+<body>
+<script>
+    let current=new Date().getFullYear();
+    let birthday=prompt("Nhập vào ngày tháng năm sinh theo định dạng 'tháng/ngày/năm'","03/17/1989");
+    birthday=new Date(birthday).getFullYear();
+    let year=current-birthday;
+    document.write("Tôi đã sống "+year+" năm");
+    document.write("<br>");
+    let month=year*12;
+    document.write("Tôi đã sống "+month+" tháng");
+    document.write("<br>");
+    let day=month*30;
+    document.write("Tôi đã sống "+day+" ngày");
+    document.write("<br>");
+    let hours=day*24;
+    document.write("Tôi đã sống "+hours+" giờ");
+    document.write("<br>");
+    let minute=hours*60;
+    document.write("Tôi đã sống "+minute+" phút");
+    document.write("<br>");
+    let second=minute*60;
+    document.write("Tôi đã sống "+second+" giây");
+</script>
+</body>
+</html>

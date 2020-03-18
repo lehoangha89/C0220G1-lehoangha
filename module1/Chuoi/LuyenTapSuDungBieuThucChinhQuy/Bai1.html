@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra chuỗi có đúng dạng dd/mm/yyyy</title>
+</head>
+<body>
+<script>
+    let nhap=prompt("Nhập ngày/tháng/năm");
+    let pattern=/^([0-9]{2})+(\/)+([0-9]{2})+(\/)+[0-9]{4}$/;
+    // if (nhap.match(pattern)) {
+    //     alert("hợp lệ");
+    // } else {
+    //     alert("không hợp lệ");
+    // }
+    alert(pattern.test(nhap));
+</script>
+</body>
+</html>

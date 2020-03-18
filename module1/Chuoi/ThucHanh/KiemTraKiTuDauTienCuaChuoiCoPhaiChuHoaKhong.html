@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự đầu tiên của chuỗi có phải là chữ hoa không</title>
+</head>
+<body>
+<script>
+    check();
+    function check() {
+        let nhap=prompt("Nhập chuỗi kí tự");
+        let regExp=/^[A-Z]/;
+        if(regExp.test(nhap)){
+            alert("Ký tự đầu tiên của chuỗi là chữ hoa")
+        }else {
+            alert("Ký tự đầu tiên của chuỗi không phải là chữ hoa")
+        }
+    }
+</script>
+</body>
+</html>

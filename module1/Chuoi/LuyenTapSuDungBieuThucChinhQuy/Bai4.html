@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra mã số bảo mật hợp lệ</title>
+</head>
+<body>
+<script>
+    //Pass hợp lệ Bắt đầu bằng Chữ Hoa
+    let nhap=prompt("Input Pass");
+    let pattern=/^[A-Z][a-z0-9]{9,}$/;
+    alert(pattern.test(nhap))
+</script>
+</body>
+</html>

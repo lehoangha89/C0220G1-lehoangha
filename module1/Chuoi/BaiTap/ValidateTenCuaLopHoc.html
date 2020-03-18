@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate tên của lớp học</title>
+</head>
+<body>
+<script>
+    // Ví dụ tên lớp hợp lệ: C0318G
+    //
+    // Ví dụ tên lớp không hợp lệ: M0318G, P0323A
+    let nhap = prompt("Input class");
+    let patt = /^([CAP])+([0-9]{4})+([GHIKLM])$/;
+    if (nhap.match(patt)) {
+        alert("Class hợp lệ");
+    } else {
+        alert("Class không hợp lệ");
+    }
+</script>
+</body>
+</html>

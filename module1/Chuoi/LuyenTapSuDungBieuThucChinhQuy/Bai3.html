@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên âm/phụ âm trong một chuỗi</title>
+</head>
+<body>
+<script>
+    let str=prompt("Nhập chuỗi kí tự");
+    let count=(str.match(/[aeoiu]/ig)).length;
+    let count2=(str.match(/[bcdfghjklmnpqrstvwxyz]/ig)).length;
+    document.write("Có "+count+" nguyên âm, "+"có "+count2+" phụ âm");
+</script>
+</body>
+</html>

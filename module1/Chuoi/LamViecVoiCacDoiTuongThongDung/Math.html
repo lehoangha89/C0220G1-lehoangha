@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="random()">Click</button><br>
+Random 0-10:<input id="to10"><br>
+Random 0-400:<input id="to400"><br>
+Random 50-100:<input id="to100">
+<script>
+    let a=document.getElementById("to10");
+    let b=document.getElementById("to400");
+    let c=document.getElementById("to100");
+    function random() {
+        a.value=Math.floor(Math.random()*11);
+        b.value=Math.floor(Math.random()*400);
+        c.value=Math.floor(Math.random()*(51)+50);
+    }
+    let num1=parseInt(prompt("Nhập số nhỏ nhất cần tìm"));
+    let num2=parseInt(prompt("Nhập số nhỏ nhất cần tìm"));
+    let num3=parseInt(prompt("Nhập số nhỏ nhất cần tìm"));
+    let num4=parseInt(prompt("Nhập số nhỏ nhất cần tìm"));
+    let result=Math.min(num1,num2,num3,num4);
+    document.write("<br>");
+    document.write("Số nhỏ nhất là: "+result);
+
+    let n=Math.floor(Math.random()*10);
+    let luythua=Math.pow(53,n);
+    document.write("<br>");
+    document.write("Lũy thừa của 53 mũ "+n+" là: "+luythua);
+
+    let r=Math.floor(Math.random()*10);
+    let radius=(Math.pow(r,2)*Math.PI);
+    document.write("<br>");
+    document.write("Tính diện tích của hình tròn có bán kính là "+r+" cm là: "+ radius);
+</script>
+</body>
+</html>

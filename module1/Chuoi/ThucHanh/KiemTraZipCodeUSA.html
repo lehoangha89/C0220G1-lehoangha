@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra Mã quốc gia nước Mỹ</title>
+</head>
+<body>
+<script>
+
+    function check(str) {
+        regexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
+        if (regexp.test(str)) {
+            return true;
+        }
+        return false;
+    }
+    let zipcode ="03201-2150";
+    console.log(check(zipcode));
+    let zipcode2="7892";
+    console.log(check(zipcode2));
+</script>
+</body>
+</html>
