@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+</head>
+<body>
+<h1>Add New Product</h1>
+<input id="input">
+<button onclick="add()">ADD</button>
+<h1>Display All Product</h1>
+<p id="ketqua"></p>
+<script>
+    let array = [];
+    let sanpham = document.getElementById("input");
+
+    function add() {
+        array.push(sanpham.value);
+        display()
+    }
+    function display() {
+        bang = "<table>";
+        for(let i=0;i<array.length;i++){
+            bang+="<tr>"+ "<td>"+array[i]+"</td>"+"<th><button onclick='editProduct("+i+")'>Edit</button></th>"+"<th><button onclick='deleteProduct("+i+")'>Delete</button></th>"+"</tr>";
+        }
+        document.getElementById("ketqua").innerHTML = bang;
+    }
+    function editProduct(a) {
+        let editProduct=prompt("Edit Product");
+        array[a]=editProduct;
+        display()
+    }
+    function deleteProduct(a) {
+        array.splice(a,1);
+        display();
+    }
+</script>
+</body>
+</html>

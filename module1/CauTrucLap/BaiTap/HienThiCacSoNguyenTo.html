@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Hiển thị 20 số nguyên tố</title>
 </head>
 <body>
 <script>
-let count=0;
-let N=2;
-let a=true;
-while (count<20){
-    for (let i=2;i<=Math.sqrt(N);i++){
-        if(N%i==0){
-            a=false;
-            break;
-        }
-        a=true;
+    let count=0;
+    let N=2;
+    let status=true;
+    while (count<20){
+        for (let i=2;i<=Math.sqrt(N);i++){
+            if(N%i===0){
+                status=false;
+                break;
+            }
+           status=true;
 
+        }
+        if (status){
+            count++;
+            document.write(N + "<br>");
+        }
+        N++;
     }
-    if (a){
-        count++;
-        document.write(N + "<br>");
-    }
-    N++;
-}
 </script>
 </body>
 </html>

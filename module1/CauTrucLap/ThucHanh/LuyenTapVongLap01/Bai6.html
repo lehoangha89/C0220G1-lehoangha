@@ -6,16 +6,17 @@
 </head>
 <body>
 <script>
-    let count=0;
-    let i=1;
-    let tong=0;
+    let count = 0;
+    let result = 0;
+    let number=0;
     while (count<=30){
-        if(i%7==0){
-            tong+=i;
+        if (number%7===0){
+            result+=number;
             count++;
-            console.log(tong);
-        }i++;
-    }document.write(tong)
+            console.log(number)
+        }
+        number++
+    }document.write(result)
 </script>
 </body>
 </html>

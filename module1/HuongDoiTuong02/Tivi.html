@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="manhinh.jpg" id="vtv"/><br>
+<button onclick="turnOn_turnOff()">Bật-Tắt</button>
+<button onclick="volume()">Volume ++</button>
+<button onclick="volume()">Volume --</button>
+<button onclick="change()">VTV3</button>
+<script>
+    class Remote{
+        constructor(tivi) {
+            this.tivi=tivi;
+        }
+        turnOn_turnOff(){
+            tivi.isOn();
+        }
+        setChanel(newChanel){
+            this.tivi.setChanel(newChanel);
+        }
+        upVolume(newVolume){
+             return this.tivi.volume++;
+        }
+        downVolume(newVolume){
+            return this.tivi.volume--;
+        }
+    }
+    class Tivi{
+        constructor(chanel,volume,status) {
+            this.chanel=chanel;
+            this.volume=volume;
+            this.status=status;
+        }
+        getChanel(){
+            return this.chanel;
+        }
+        getVolume(){
+            return this.volume;
+        }
+        getStatus(){
+            return this.status;
+        }
+        isOn(){
+           return  this.status=true;
+        }
+        setChanel(newChanel){
+            this.chanel=newChanel;
+            return this.chanel;
+        }
+        setVolume(newVolume){
+            this.volume=newVolume;
+            return this.volume;
+        }
+        display(){
+           if(this.getStatus()){
+                document.getElementById("vtv").src="vtv1.jpg";
+           }
+        }
+    }
+
+    let tivi=new Tivi("vtv1",20,false);
+    let remote= new Remote(tivi);
+    remote.turnOn_turnOff(tivi);
+    remote.setChanel("vtv3");
+    console.log(tivi);
+    remote.upVolume(tivi);
+    console.log(tivi.volume);
+    function turnOn_turnOff() {
+
+    }
+</script>
+</body>
+</html>

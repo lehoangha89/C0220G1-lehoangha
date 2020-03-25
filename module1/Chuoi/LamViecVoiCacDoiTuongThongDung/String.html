@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Chuỗi: Tôi yêu ngôn ngữ lập trình Javascript
+<br>
+<script>
+    let array = "Tôi yêu ngôn ngữ lập trình Javascript";
+    let pattern = array.match(/[a]/ig).length;
+    document.write("Trong chuỗi có " + pattern + " chữ a");
+    document.write("<br>");
+
+    let arrStr = array.split("");
+    document.write(arrStr+"<br>");
+
+let patt =array.match(/[\S]/ig).length;
+document.write("Số lượng từ có trong chuỗi là: "+patt+"<br>");
+
+let newArray=array.replace("Javascript","Typescript");
+document.write(newArray)
+</script>
+</body>
+</html>

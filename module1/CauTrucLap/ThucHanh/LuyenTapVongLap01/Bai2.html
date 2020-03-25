@@ -6,14 +6,18 @@
 </head>
 <body>
 <script>
+
     while (1){
-    let nhap=parseInt(prompt("nhiệt độ hiện tại"));
-    if (nhap<20) {
-        alert("tăng nhiệt độ");
-    }else if (nhap>100){
-        alert("giảm nhiệt độ");
-    }else alert("nhiệt độ bình thường")
+        let number = prompt("Nhập nhiệt độ");
+        if (number>=100){
+            alert("Giảm nhiệt độ")
+        }else if (number<=20){
+            alert("Tăng nhiệt độ")
+        }else {
+            alert("Nhiệt độ bình thường")
+        }
     }
+
 </script>
 </body>
 </html>

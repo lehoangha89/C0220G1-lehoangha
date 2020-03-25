@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let myColor = ["Red", "Green", "White", "Black"];
+    myColor.toString();
+    myColor.join(",");
+    document.write(myColor);
+
+    let num = prompt("Nhập số");
+    let str = num.toString();
+    let result = [str[0]];
+    for (let x = 1; x < str.length; x++) {
+        if (str[x] % 2 === 0) {
+            result.push('-', str[x]);
+        } else {
+            result.push(str[x]);
+        }
+    }
+    document.write("<br>");
+    document.write(result.join(''));
+
+    let nhap = prompt("Nhập kí tự");
+    const UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    const ketqua = [];
+    for (let x = 0; x < nhap.length; x++) {
+        if (UPPER.includes(nhap[x])) {
+            ketqua.push(nhap[x].toLowerCase());
+        } else if (LOWER.includes(nhap[x])) {
+            ketqua.push(nhap[x].toUpperCase());
+        } else {
+            ketqua.push(nhap[x]);
+        }
+    }
+    document.write("<br>");
+    document.write(ketqua.join(''));
+</script>
+</body>
+</html>

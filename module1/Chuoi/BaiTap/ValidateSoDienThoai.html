@@ -9,7 +9,7 @@
     // Ví dụ số điện thoại hợp lệ: (84)-(0978489648)
     // Ví dụ tên lớp không hợp lệ: (a8)-(22222222)
     let nhap=prompt("Input Phone Number");
-    let pattern=/^\(+[0-9]{2}\)+(\-)+\(+[0-9]{10}\)$/;
+    let pattern=/^\(+[0-9]{2}\)-\(+[0-9]{10}\)$/;
     if (nhap.match(pattern)) {
         alert("Số điện thoại hợp lệ");
     } else {

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    abc();
+    function abc() {
+        let so1 = parseInt(prompt("Nhập số bắt đầu từ"));
+        let so2 = parseInt(prompt("Nhập số kết thúc"));
+        let array =[Math.floor((Math.random() * (so2 - so1)) + so1)];
+        let doan=0;
+        while (array!=doan) {
+            doan = parseInt(prompt("Số người dùng đoán"));
+            if (array < doan) {
+                alert("lớn hơn số random");
+            } else if (array > doan) {
+                alert("nhỏ hơn số random");
+            }
+        }
+        alert("chúc mừng")
+    }
+</script>
+</body>
+</html>

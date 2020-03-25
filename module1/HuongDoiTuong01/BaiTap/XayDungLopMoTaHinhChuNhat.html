@@ -5,45 +5,47 @@
     <title>Title</title>
 </head>
 <body>
-<canvas id="myCanvas" width="500px" height="250px" style="border: 1px solid #d3d3d3;"></canvas>
-<button onclick="changeRectangle()">Change</button>
-<button onclick="result()">Calculate</button>
-Result:<input type="text" id="ketqua">
+<canvas id="myCanvas" width="500" height="300" style="border: 1px solid chocolate"></canvas>
+<button onclick="change()">Change</button>
+<button onclick="result()">Result</button>
+<input id="ketqua">
 <script>
-let rectangle=function (width,height) {
-    this.width=width;
-    this.height=height;
-    this.Area=function () {
-        return this.width*this.height;
-    }
-    this.perimeter=function () {
-        return 2*(this.width+this.height);
+    class Rectangle{
+        constructor(width,height) {
+            this.width=width;
+            this.height=height;
+            this.Arena=function () {
+                return this.height*this.width;
+            };
+            this.perimeter=function () {
+                return 2*(this.width+this.height);
+            }
+        }
 
+    createRectangle() {
+        let canvas=document.getElementById("myCanvas");
+        let ctx=canvas.getContext("2d");
+        ctx.fillStyle="#55D281";
+        ctx.fillRect(10,10,this.width,this.height);
     }
-    this.createRectangle=function (){
-        let ctx = document.getElementById("myCanvas").getContext("2d");
-        ctx.beginPath();
-        ctx.fillRect(50, 50, this.width, this.height);
-        ctx.stroke();
     }
+    let dai=parseInt(prompt("Nhập chiều dài"));
+    let rong=parseInt(prompt("Nhập chiều rộng"));
+    let rectangle=new Rectangle(dai,rong);
+    rectangle.createRectangle();
+    function change() {
+        rectangle.width=parseInt(prompt("Nhập chiều dài"));
+        rectangle.height=parseInt(prompt("Nhập chiều rộng"));
+        let canvas=document.getElementById("myCanvas");
+        let ctx=canvas.getContext("2d");
+        ctx.fillStyle="";
+        ctx.clearRect(0,0,500,300);
+        rectangle.createRectangle();
+    }
+function result() {
+        let kq=document.getElementById("ketqua");
+        kq.value=("Diện tích: "+rectangle.Arena()+" Chu vi: "+rectangle.perimeter())
 }
-let dai=parseInt(prompt("Nhập chiều dài hình chữ nhật"));
-let rong=parseInt(prompt("Nhập chiều rộng hình chữ nhật"));
-let Rectangle= new rectangle(dai,rong);
-Rectangle.createRectangle();
-function changeRectangle() {
-    Rectangle.width=parseInt(prompt("Nhập chiều dài hình chữ nhật"));
-    Rectangle.height=parseInt(prompt("Nhập chiều rộng hình chữ nhật"));
-    let ctx = document.getElementById("myCanvas").getContext("2d");
-    ctx.clearRect(0,0,500,250);
-    Rectangle.createRectangle();
-}
-function result(){
-    let kq=document.getElementById("ketqua");
-    kq.value=("Dien tich: "+Rectangle.Area()+" Chu vi:"+Rectangle.perimeter())
-}
-
-
 </script>
 </body>
 </html>

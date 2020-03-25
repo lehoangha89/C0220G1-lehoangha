@@ -16,10 +16,71 @@
         }
         static Messenger="";
         turnOn(){
+            if(this.batterry===0){
+                alert("sac dt");
+                return this.flag=false;
+            }
+            return this.flag=true;
+        }
+        turnOff(){
+            return this.flag=false;
+        }
+        isOn(){
+            return this.flag=true;
+        }
+        getBattery(){
+            if(this.isOn()){
+                return this.batterry;
+            }else {alert("Bat dt len")}
+        }
+        chargeBattery(charge){
+            let currentBattery=this.batterry;
+            this.batterry=currentBattery+charge;
+        }
+        batteryDrain(){
+            let currentBattery=this.batterry;
+            this.batterry=currentBattery-1;
+        }
+        getInbox(){
+            if(this.isOn()){
+                this.batteryDrain();
+                return Mobile.Messenger
+            }
+        }
+        sendMessenger(messenger){
+            this.batteryDrain();
+            this.send=messenger;
+            Mobile.Messenger=messenger;
+        }
+        getSend(){
+            if (this.isOn()){
+                this.batteryDrain();
+                return this.send;
+            }
 
         }
-
     }
+    function samsungProcess() {
+        let samsung=new Mobile(50,"Wellcome Samsung","","");
+        samsung.turnOn();
+        document.write("Samsung=On "+samsung.isOn()+"<br>");
+        document.write("So pin hien tai"+samsung.getBattery()+"<br>");
+        samsung.chargeBattery(10);
+        document.write("Sau khi sac dt"+samsung.getBattery()+"<br>");
+        samsung.sendMessenger("Messenger from Samsung");
+        document.write("Pin sau khi goi tin nhan"+samsung.getBattery()+"<br>");
+        document.write("<h3>"+"Samsung send: "+samsung.getSend()+"</h3>"+"<br>")
+    }
+    function iphoneProcess() {
+        let iphone=new Mobile(0,"Wellcome Iphone","","");
+        iphone.chargeBattery(70);
+        iphone.isOn();
+        document.write("Iphone=On "+iphone.isOn()+"<br>");
+        document.write("So pin hien tai cua iphone"+iphone.getBattery()+"<br>");
+        document.write("Iphone Inbox"+iphone.getInbox());
+    }
+    samsungProcess();
+    iphoneProcess();
 </script>
 </body>
 </html>

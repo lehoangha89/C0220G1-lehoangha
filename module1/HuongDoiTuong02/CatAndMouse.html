@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mouse{
+        constructor(name,weight,speed,status) {
+            this.name=name;
+            this.weight=weight;
+            this.speed=speed;
+            this.status=status;
+        }
+        getName(){
+            return this.name;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        getSpeed(){
+            return this.speed;
+        }
+        getStatus(){
+
+            return this.status;
+        }
+        speak(){
+            return document.write("chit, chit");
+        }
+        setName(newName){
+             this.name=newName;
+        }
+        setWeight(newWeight){
+             this.weight=newWeight;
+        }
+        increaseSpeed(){
+            return this.speed++;
+        }
+        biAn(){
+            this.weight--;
+
+            return this.weight;
+        }
+        dieMouse(){
+
+                this.status=false;
+            }
+
+    }
+    class Cat{
+        constructor(name,speed,weight) {
+            this.name=name;
+            this.weight=weight;
+            this.speed=speed;
+        }
+        getName(){
+            return this.name;
+        }
+        getSpeed(){
+            return this.speed;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        speak(){
+            return document.write("meo,meo")
+        }
+        setWeight(newWeight){
+            return this.weight=newWeight;
+        }
+        catchMouse(Mouse){
+            if (this.getSpeed()>Mouse.getSpeed()){
+                Mouse.dieMouse();
+
+                    this.weight++;
+                    Mouse.biAn();
+
+            }else {
+                this.speed++;
+                return this.speed;
+            }
+        }
+
+    }
+    let mouse= new Mouse("Mickey",5,5,true);
+    let cat=new Cat("Tom",1,5);
+
+   while (mouse.getWeight()!==0){
+       cat.catchMouse(mouse);
+       document.write("toc do cua chuot la: "+mouse.getSpeed()+"<br>");
+       document.write("trong luong cua chuot la: "+mouse.getWeight()+"<br>");
+       document.write("toc do cua meo la: "+cat.getSpeed()+"<br>");
+       document.write("trong luong cua meo la: "+cat.getWeight()+"<br>");
+       document.write("tinh trang cua chuot "+mouse.getStatus()+"<br>");
+    }
+</script>
+</body>
+</html>

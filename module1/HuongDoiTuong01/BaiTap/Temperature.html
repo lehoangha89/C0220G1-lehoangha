@@ -10,17 +10,18 @@
         constructor(ceslius) {
             this.ceslius=ceslius;
         }
-        getCesliusF=function () {
+        getCesliusF() {
             return (this.ceslius*1.8+32);
         }
-        getCesliusKelvin=function () {
+        getCesliusKelvin() {
             return (this.ceslius+273.15)
         }
     }
-    let temperature= new Temperature(25);
+    let number=parseInt(prompt("Nhiệt độc cần quy đổi"));
+    let temperature= new Temperature(number);
     let cesliusF=  temperature.getCesliusF();
     let celisusKelvin= temperature.getCesliusKelvin();
-    alert("Ceslius F: "+cesliusF+"\n"+"Ceslius kelvin: "+celisusKelvin)
+    document.write("Ceslius F: "+cesliusF+"<br>"+"Ceslius kelvin: "+celisusKelvin)
 </script>
 </body>
 </html>
