@@ -1,37 +1,26 @@
-class SwitchButton {
-constructor(status){
-this.status = status;
-}
-getStatus(){
-return this.status;
-}
-setStatus(newStatus){
-this.status = newStatus;
-}
-turnOn_turnOff(){
-this.status = !this.status;
-}
-}
-
-class Light {
-constructor(switchButton){
-this.switchButton = switchButton;
-}
-onLight(){
-if (this.switchButton.getStatus() === true){
-document.getElementById("bongden").src = "img/Den_Sang.gif";
-document.getElementById("result").innerHTML = "Bong den da bat";
-}else {
-document.getElementById("bongden").src = "img/Den_Tat.gif";
-document.getElementById("result").innerHTML = "Bong den da tat";
-}
-}
-}
-
-let switchButton = new SwitchButton(false);
-let lamp = new Light(switchButton);
-
-function turnOn_TurnOff(){
-switchButton.turnOn_turnOff();
-lamp.onLight();
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function bubbleSort(arr) {
+        const len = arr.length;
+        for (let i = len-1; i >= 0; i--) {
+            for (let j = 1; j <= i; j++) {
+                if (arr[j-1] > arr[j]) {
+                    let temp = arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+    let arr=[1,5,3,8,4,11,6,7];
+    document.writeln(bubbleSort(arr));
+</script>
+</body>
+</html>

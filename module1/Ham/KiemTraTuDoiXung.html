@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    function check(arr) {
+        let flag=true;
+        for(let i=0;i<=arr.length/2;i++){
+            if(arr[i]!==arr[arr.length-1-i]){
+                flag=false;
+            }
+        }
+        if(flag){
+            alert("mang   doi xung");
+        }else {
+            alert("mang ko doi xung")
+        }
+    }
+    let arr=prompt("nhap vao mang");
+    check(arr);
+</script>
+</body>
+</html>

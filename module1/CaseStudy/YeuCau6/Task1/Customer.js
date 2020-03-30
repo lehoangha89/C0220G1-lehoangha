@@ -69,13 +69,13 @@ let Customer = function () {
     };
     this.totalPays = function () {
         let money = 0;
-        if (this.typeService === "Villa") {
+        if (this.getTypeService() === "Villa") {
             money = 500;
-        } else if (this.typeService === "House") {
+        } else if (this.getTypeService() === "House") {
             money = 300;
-        } else if (this.typeService === "Room") {
+        } else if (this.getTypeService() === "Room") {
             money = 200;
         }
-        return this.getRentDays * money(1 - this.getDiscount / 100);
+        return this.getRentDays() * money*(1 - this.getDiscount() / 100);
     }
 };

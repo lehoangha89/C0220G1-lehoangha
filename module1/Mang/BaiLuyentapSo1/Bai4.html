@@ -2,26 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bai 4</title>
 </head>
 <body>
 <script>
     let arr=[];
     let i=0;
-    // let a=0;
-    // let b=arr.length-1;
+
     while (i<5){
         let nhap=parseInt(prompt("nhap so"));
         arr[i]=nhap;
         i++;
-    }arr.reverse();
-    /*while (a<b){
-        arr[a]=arr[a]+arr[b];
-        arr[b]=arr[a]-arr[b];
-        arr[a]=arr[a]-arr[b];
-        a++;
-        b--;
-    }*/document.write(arr)
+    }document.write("giá trị nhập "+arr+"<br>");
+    arr.reverse();
+    document.write("đảo ngược "+arr);
+    // let a=arr[0];
+    // let b=arr.length-1;
+    // while (a<b){
+    //
+    //     arr[a]=arr[a]+arr[b];
+    //     arr[b]=arr[a]-arr[b];
+    //     arr[a]=arr[a]-arr[b];
+    //     a++;
+    //     b--;
+    // }
+
 </script>
 </body>
 </html>

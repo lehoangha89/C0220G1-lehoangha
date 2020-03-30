@@ -6,30 +6,22 @@
 </head>
 <body>
 <script>
-    let b=0;
-    let arr=[];
-    let total=0;
-    while (b<5){
-        let nhap=parseInt(prompt("nhap so nguyen"));
-        arr[b]=nhap;
-        b++;
-    }
-    let max=0;
-    let index;
-    for (let i=0;i<arr.length;i++){
-        if(arr[i]>max){
-            max=arr[i];
-            index=i;
-        }
-        total += arr[i];
-    }
-    total= total / arr.length;
-    document.write(arr);
-    document.write("<br>");
-    document.write("Vi tri so lon nhat: " + index);
-    document.write("<br>");
-    document.write("Gia tri trung binh: "+total);
-
+   let array=[];
+   let result=0;
+   let a=0;
+  while (a<5){
+      let number=parseInt(prompt("nhap so"));
+      array[a]=number;
+      a++;
+  }
+   let max=array[0];
+  for (let i=0; i<array.length;i++){
+      if (array[i]>max){
+          max=array[i];
+      }
+      result+=array[i];
+   }result=result/array.length;
+   document.write("Số lớn nhất là: "+max+"kết quả trung bình: "+result)
 </script>
 </body>
 </html>

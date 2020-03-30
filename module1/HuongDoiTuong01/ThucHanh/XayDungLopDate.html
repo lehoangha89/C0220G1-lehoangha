@@ -6,53 +6,53 @@
 </head>
 <body>
 <script>
-    let MyDate = function (day, month, year) {
-        this.day = day;
-        this.month = month;
-        this.year = year;
-
-        this.getDay = function () {
+    class Date {
+        constructor(day, month,year) {
+            this.day=day;
+            this.month=month;
+            this.year=year;
+        }
+        getDay(){
             return this.day;
-        };
-        this.getMonth = function () {
+        }
+        getMonth(){
             return this.month;
-        };
-        this.getYear = function () {
+        }
+        getYear(){
             return this.year;
-        };
-        this.setDay = function (day) {
-            this.day = day;
-        };
-        this.setMonth = function (month) {
-            this.month = month;
-        };
-        this.setYear = function (year) {
-            this.year = year;
         }
-        this.setDate = function (day, month, year) {
-            this.day = day;
-            this.month = month;
-            this.year = year;
+        setDay(newDay){
+            this.day=newDay;
+            return this.day;
         }
-        this.toDateString = function () {
-            return this.day + "//" + this.month + "//" + this.year
+        setMonth(newMonth){
+            this.month=newMonth;
+            return this.month;
         }
-    };
-    let date = new MyDate(2, 2, 2007);
-    let day = date.getDay();
+        setYear(newYear){
+           this.year=newYear;
+            return this.year
+        }
+        setDate(day,month,year){
+            this.day=day;
+            this.month=month;
+            this.year=year;
+        }
+        toString(){
+            return this.getDay()+"//"+this.getMonth()+"//"+this.getYear()
+        }
+    }
+    let date= new Date(27,3,2020);
+    // alert(date.toString());
+    // date.setDate(17,8,1989);
+    // alert(date.toString());
+    let day=date.getDay();
+    let month=date.getMonth();
+    let year=date.getYear();
+    alert(day+"/"+month+"/"+year);
+    date.setDate(17,8,1989);
+    alert(date.toString());
 
-    let month = date.getMonth();
-
-    let year = date.getYear();
-    alert(day + "/" +month + "/" + year);
-    date=new MyDate(17,8,1989);
-    day = date.getDay();
-
-    month = date.getMonth();
-
-    year = date.getYear();
-    alert(day + "//" +month + "//" + year);
-    alert(date.toDateString())
 </script>
 </body>
 </html>
