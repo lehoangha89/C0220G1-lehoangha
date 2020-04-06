@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function so_chinh_phuong(a)
+    {
+        // Ta dùng hàm Math.sqrt để lấy căn bậc 2
+        // sau đó chia lấy dư với 1, nếu bằng 0 thì là số chính phương,
+        // ngược lại thì không phải là số chính phương
+        if (Math.sqrt(a) % 1 === 0){
+            alert(a + " là số chính phương");
+        }
+        else {
+            alert(a + " không phải là số chính phương");
+        }
+    }
+
+    so_chinh_phuong(4);
+    so_chinh_phuong(12);
+    so_chinh_phuong(13);
+    so_chinh_phuong(16);
+
+</script>
+</body>
+</html>

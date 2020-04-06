@@ -11,12 +11,12 @@ Chòm sao: <input id="chomsao">
 <script>
     let chomsao = document.getElementById("chomsao");
     let ngoisao = document.getElementById("ngoisao");
-    // let Star=prompt("Nhập tên");
+
     let ketqua;
     let flag=false;
     function search() {
         let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
-        let arr2 = ["Ursa", "Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa", "Major", "Leo"];
+        let arr2 = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa", "Major", "Leo"];
 
         for (let i = 0; i < arr1.length; i++) {
             if (ngoisao.value === arr1[i]) {

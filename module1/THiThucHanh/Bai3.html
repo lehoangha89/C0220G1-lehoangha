@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function findMaxScore(array) {
+        let arrayMax=array[0];
+        for (let i=0;i<array.length;i++){
+            if (array[i]>arrayMax){
+                arrayMax=array[i];
+                index=array.lastIndexOf(arrayMax);
+            }
+        }return arrayMax;
+    }
+    let array1=[10, 5, 2, 8, -1, 6, 8];
+    let array2=[2, 4, 0, 5, 1];
+    let array3=[8, 6, 2, 8, 1, 1,8];
+    let index=0;
+    document.write("Số điểm lớn nhất "+findMaxScore(array1)+" vị trí thứ "+index+"<br>");
+    document.write("Số điểm lớn nhất "+findMaxScore(array2)+" vị trí thứ "+index+"<br>");
+    document.write("Số điểm lớn nhất "+findMaxScore(array3)+" vị trí thứ "+index+"<br>");
+</script>
+</body>
+</html>

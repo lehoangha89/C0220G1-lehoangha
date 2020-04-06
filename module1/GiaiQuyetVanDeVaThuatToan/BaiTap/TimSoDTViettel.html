@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sử dụng thuật toán tìm kiếm</title>
+</head>
+<body>
+<script>
+    let array=['0383896105', '0373793242', '0971234568', '0897898521', '0771593578', '0811032465', '0927789956'];
+    let regexp=/(032|033|034|035|036|037|038|039|096|097|098)+[0-9]{7}$/;
+    let flag=false;
+    for (let i=0;i<array.length;i++){
+        if (regexp.test(array[i])){
+            flag=true;
+            document.write(array[i]+"<br>")
+        }
+    }
+    if (flag===false){
+        alert("không tìm thấy")
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa của một số nguyên dương</title>
+</head>
+<body>
+<script>
+    let number=parseInt(prompt("Nhập só nguyên dương cần tính"));
+    let result=1;
+    for (let i=1;i<=number;i++){
+        result*=i;
+console.log(result)
+    }document.write("Giai thừa của "+number+" là: "+result)
+    // function giaithua(number) {
+    //     let result=number;
+    //     if (number===0||number===1){
+    //         return 1
+    //     }
+    //     while (number>1){
+    //         number--;
+    //         result *=number;
+    //     }
+    //     return result;
+    // }
+    // let number=parseInt(prompt("nhập số"));
+    // document.write("giai thừa của "+number+" là: "+giaithua(number));
+</script>
+</body>
+</html>

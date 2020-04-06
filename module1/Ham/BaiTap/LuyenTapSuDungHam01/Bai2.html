@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-    let number=1;
-    function bai2(a) {
-        for(let i=0;i<10;i++){
-            number++;
-        }
-    }document.writeln("Giá trị của number trước khi chạy function: " + number);
-    bai2(number);
-    document.writeln("Giá trị của number sau khi chạy function: " + number)
+
+    function bai2(nhap) {
+
+        return nhap+=1;
+    }
+    nhap = parseInt(prompt("nhap so"));
+    let kq=bai2(nhap);
+    alert(kq);
 </script>
 </body>
 </html>

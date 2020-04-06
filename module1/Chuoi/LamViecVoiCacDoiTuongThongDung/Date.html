@@ -7,8 +7,8 @@
 <body>
 <script>
     let current=new Date().getFullYear();
-    let birthday=prompt("Nhập vào ngày tháng năm sinh theo định dạng 'tháng/ngày/năm'","03/17/1989");
-    birthday=new Date(birthday).getFullYear();
+    let birthday=prompt("Nhập vào ngày tháng năm sinh theo định dạng 'năm/tháng/ngày'","1995/03/18");
+   birthday=new Date(birthday).getFullYear();
     let year=current-birthday;
     document.write("Tôi đã sống "+year+" năm");
     document.write("<br>");

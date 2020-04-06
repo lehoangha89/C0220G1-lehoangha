@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array=["nhan","nam","nga","lam","liem"];
+    for(let i=0;i<array.length;i++){
+        if(array[i].charAt(0)==="n"){
+            document.write(array[i]+"<br>");
+        }
+    }
+
+    function check(array) {
+        for (let i=0;i<array.length;i++){
+            array[i]= array[i].charAt(0).toUpperCase() + array[i].slice(1);
+        }
+        return array;
+    }document.write(check(array))
+</script>
+</body>
+</html>

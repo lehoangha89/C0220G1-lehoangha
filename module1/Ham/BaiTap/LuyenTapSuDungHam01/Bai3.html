@@ -5,23 +5,18 @@
     <title>Title</title>
 </head>
 <body>
-Nhập số 1: <input id="A">
-Nhập số 2: <input id="B">
-<button onclick="check()">Check</button>
 <script>
-    function check() {
-        let a=document.getElementById("A").value;
-        let b=document.getElementById("B").value;
-        let sum=0;
-        if(a>b){
-            alert("1 lớn hơn 2")
-        }else if(a<b){
-            sum=parseInt(a)+parseInt(b);
-            alert(sum);
-
+    let a=parseInt(prompt("nhập số thứ nhất"));
+    let b= parseInt(prompt("nhập số thứ hai"));
+    function sum(a,b) {
+        if (a>b){
+            alert("Số thú nhất lớn hơn số thứ hai");
+        }else {
+            alert(a+b)
+           ;
         }
-
     }
+    sum(a,b)
 </script>
 </body>
 </html>

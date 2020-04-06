@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Hocsinh{
+        constructor(stt,name,birthday,total) {
+            this.stt=stt;
+            this.name=name;
+            this.birthday=birthday;
+            this.total=total;
+        }
+        getStt(){
+            return this.stt;
+        }
+        getName(){
+            return this.name;
+        }
+        getBirthday(){
+            return this.birthday;
+        }
+        getTotal() {
+            if(this.total>8){
+                alert("Học sinh giỏi")
+            }else if (this.total>=6.5){
+                alert("Học sinh khá")
+            }else if (this.total>=5){
+                alert("Học sinh trung bình")
+            }else if (this.total>=3.5){
+                alert("Học sinh yếu")
+            }else {
+                alert("Học sinh kém")
+            }
+            return this.total;
+        }
+        setStt(newStt){
+            this.stt=newStt;
+            return this.stt;
+        }
+        setName(newName){
+            this.name=newName;
+            return this.name;
+        }
+        setBirthday(newBirthday){
+            this.birthday=newBirthday;
+            return this.birthday;
+        }
+        setTotal(newTotal){
+
+            this.total=newTotal;
+            return this.total;
+        }
+    }
+    let hocsinh=new Hocsinh("01","ha","17/3/1995",parseInt(prompt("Nhập số điểm")));
+    document.write("Số thứ tự: "+hocsinh.getStt()+" Tên: "+hocsinh.getName()+" Ngày sinh: "
+        +hocsinh.getBirthday()+" Điểm Trung Bình: "+hocsinh.getTotal())
+</script>
+</body>
+</html>

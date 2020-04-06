@@ -6,21 +6,25 @@
 </head>
 <body>
 <script>
-    let arr = [];
-    for (let i = 0; i < 3; i++) {
-        arr[i] = prompt("nhập số nguyên: ")
+    let array = [];
+    let a = 0;
+    while (a < 5) {
+        let nhap = parseInt(prompt("Nhập số"));
+        array[a] = nhap;
+        a++
     }
-    function min(x) {
-        let min = x[0];
-        for (let i = 1; i < x.length; i++) {
-            if (x[i] < min) {
-                min = x[i];
+    function find(arrayMin) {
+        let min=arrayMin[0];
+        for (let i=0;i<arrayMin.length;i++){
+            if (arrayMin[i]<min){
+                min=arrayMin[i];
             }
         }
-        return min;
+        return min
     }
-    let result = min(arr);
-    document.write("So nho nhat la: "+result);
+
+    let result = find(array);
+    document.write("Só nhỏ nhất trong mảng là: "+result);
 </script>
 </body>
 </html>
